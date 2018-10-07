@@ -11,10 +11,17 @@ export class ClientsServiceService {
 
   }
   
-  getClients() {
-    return this.http.get('clients.json').pipe(map(response => response.json()));
+  getClientsList() {
+    return this.http.get('clients.json')
+    .pipe(map(response => response.json()))
+    .pipe(map(clients => {
+      return clients.map(c => {
+        return {
+          name: c.general.firstName + ' ' + c.general.lastName
+        }
+      })
+    }))
   }
-
 
   clients = [
     {name: 'One'},

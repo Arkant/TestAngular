@@ -11,9 +11,5 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
   }
-  clients = [
-    {name: 'One'},
-    {name: 'Two'},
-    {name: 'Three'},
-  ]
+
 }
