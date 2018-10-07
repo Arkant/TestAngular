@@ -2,12 +2,12 @@
         <h1>Welcome to {{title}}</h1> 
         <div class="row">
                 <div class="input-field col s6">
-                  <input  id="first_name" class="validate" [(ngModel)]= "searchStr">
+                  <input placeholder="Enter name to filter"  id="first_name" class="validate" [(ngModel)]= "searchStr">
                   <label class="active" for="first_name">Name</label>
                 </div>
         </div>
         <div class="row md4">
-                <app-list [client] = "c" *ngFor = "let c of clients | searchUser:searchStr "></app-list>
+                <app-list [client] = "c" *ngFor = "let c    of clients | searchUser:searchStr "></app-list>
         </div> 
 </div>
  

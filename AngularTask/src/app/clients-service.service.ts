@@ -23,11 +23,4 @@ export class ClientsServiceService {
       })
     }))
   }
-
-  clients = [
-    {name: 'One'},
-    {name: 'Two'},
-    {name: 'Three'},
-    {name: 'four'},
-  ]
 }

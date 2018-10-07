@@ -4,6 +4,20 @@ img {
     border-radius: 20px;
 }
 
-li {
-    
+.collection {
+    width: 45%;
+    height: 80px;
+}
+
+.secondary-content{
+    margin: 12px;
+}
+
+.title {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
