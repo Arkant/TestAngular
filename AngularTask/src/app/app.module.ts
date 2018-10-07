@@ -6,6 +6,7 @@ import { ContactsComponent } from './contact/contacts/contacts.component';
 import { ListComponent } from './contact/list/list.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '../../node_modules/@angular/common';
+import { SearchUserPipe } from './search-user.pipe';
 // import { Route } from '../../node_modules/@angular/compiler/src/core';
 
 // const routes: Route = [
@@ -16,7 +17,8 @@ import { CommonModule } from '../../node_modules/@angular/common';
   declarations: [
     AppComponent,
     ContactsComponent,
-    ListComponent
+    ListComponent,
+    SearchUserPipe
   ],
   imports: [
     BrowserModule,

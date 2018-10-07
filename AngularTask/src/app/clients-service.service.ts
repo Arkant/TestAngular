@@ -17,7 +17,8 @@ export class ClientsServiceService {
     .pipe(map(clients => {
       return clients.map(c => {
         return {
-          name: c.general.firstName + ' ' + c.general.lastName
+          name: c.general.firstName + ' ' + c.general.lastName,
+          image: c.general.avatar
         }
       })
     }))

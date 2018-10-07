@@ -11,13 +11,16 @@ export class AppComponent implements OnInit {
   title = 'AngularTask';
 
   clients = [];
-
+  searchStr = '';
   constructor(private clientsService: ClientsServiceService) {
   }
 
   ngOnInit() {
-    this.clientsService.getClientsList().subscribe(clients => {console.log(clients)});
-    // this.clients = this.clientsService.clients;
+    this.clientsService.getClientsList().subscribe(
+      clients => {
+        this.clients = clients;
+      });
+  
   }
   
 }
