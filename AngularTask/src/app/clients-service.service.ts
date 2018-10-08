@@ -18,7 +18,8 @@ export class ClientsServiceService {
       return clients.map(c => {
         return {
           name: c.general.firstName + ' ' + c.general.lastName,
-          image: c.general.avatar
+          image: c.general.avatar,
+          job: c.job.title
         }
       })
     }))

@@ -2,7 +2,11 @@
           <li class="collection-item avatar" >
               
               <img src="{{ client.image }}" alt="Photo">
-              <p class="title">{{client.name}}</p>
+              <div id="content">
+                  <p class="title">{{client.name}} <br> 
+                    {{client.job}}</p>
+              </div>
+              
               <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
             </li>
       </ul>

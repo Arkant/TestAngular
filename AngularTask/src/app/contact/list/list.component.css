@@ -1,13 +1,18 @@
+#content {
+    padding: 20px;
+    text-align: right;
+}
 img {
     width: 55px;
     height: 55px;
     border-radius: 20px;
 }
 
+/* 
 .collection {
     width: 45%;
     height: 80px;
-}
+} */
 
 .secondary-content{
     margin: 12px;
