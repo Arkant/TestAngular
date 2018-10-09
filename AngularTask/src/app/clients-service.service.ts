@@ -19,7 +19,10 @@ export class ClientsServiceService {
         return {
           name: c.general.firstName + ' ' + c.general.lastName,
           image: c.general.avatar,
-          job: c.job.title
+          job: c.job.title,
+          email: c.contact.email,
+          phone: c.contact.phone,
+          address: c.address.country +', ' + c.address.city + ', ' + c.address.street 
         }
       })
     }))

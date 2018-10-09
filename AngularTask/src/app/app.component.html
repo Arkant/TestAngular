@@ -1,19 +1,33 @@
 <div class="container">
         <h1>Welcome to {{title}}</h1> 
-        <div class="row">
+        <!-- <div class="row">
                 <div class="input-field col s6">
-                  <input placeholder="Enter name to filter"  id="first_name" class="validate" [(ngModel)]= "searchStr">
+                  <input placeholder="Enter name to filter" 
+                  id="first_name" class="validate" 
+                  [(ngModel)]= "searchStr">
                   <label class="active" for="first_name">Name</label>
                 </div>
-        </div>
+        </div> -->
         <div class="row">
                 <div class="col s6" id="jora">
-                        <app-list [client] = "c" *ngFor = "let c of clients | searchUser:searchStr "></app-list>    
+                        <app-list [client] = "c" *ngFor = "let c of clients | searchUser:searchStr"
+                        [class.selected]=" c === selectedContact"
+                        (click)="onSelect(c)" 
+                        ></app-list>    
                  </div>
                  <div class="col s6">
-                        <app-contacts></app-contacts>
+                  <div *ngIf="selectedContact">
+                    <h2>{{selectedContact.name | uppercase}} Details</h2>
+                    <img src="{{ selectedContact.image }}" alt="Photo">
+                    <div><span>Name: </span>{{selectedContact.name}}</div>
+                    <div><span>Job: </span>{{selectedContact.job}}</div>
+                    <div><span>Email: </span>{{selectedContact.email}}</div>
+                    <div><span>Phone: </span>{{selectedContact.phone}}</div>
+                    <div><span>Address: </span>{{selectedContact.address}}</div>
+              </div>
                  </div>  
         </div>
+
         
 </div>
  

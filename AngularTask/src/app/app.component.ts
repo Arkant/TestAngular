@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientsServiceService } from './clients-service.service';
+import { Contact } from '../app/Contact';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,12 @@ export class AppComponent implements OnInit {
         this.clients = clients;
       });
   
+  }
+  heroes = this.clients;
+  selectedContact: Contact;
+  
+  onSelect(contact: Contact): void {
+    this.selectedContact = contact;
   }
   
 }
