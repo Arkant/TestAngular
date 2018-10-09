@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
       });
   
   }
-  heroes = this.clients;
   selectedContact: Contact;
   
   onSelect(contact: Contact): void {

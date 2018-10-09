@@ -13,21 +13,20 @@
                         <app-list [client] = "c" *ngFor = "let c of clients | searchUser:searchStr"
                         [class.selected]=" c === selectedContact"
                         (click)="onSelect(c)" 
-                        ></app-list>    
+                        >
+                        </app-list>    
                  </div>
                  <div class="col s6">
-                  <div *ngIf="selectedContact">
-                    <h2>{{selectedContact.name | uppercase}} Details</h2>
-                    <img src="{{ selectedContact.image }}" alt="Photo">
-                    <div><span>Name: </span>{{selectedContact.name}}</div>
-                    <div><span>Job: </span>{{selectedContact.job}}</div>
-                    <div><span>Email: </span>{{selectedContact.email}}</div>
-                    <div><span>Phone: </span>{{selectedContact.phone}}</div>
-                    <div><span>Address: </span>{{selectedContact.address}}</div>
-              </div>
+                        <div *ngIf="selectedContact">
+                                <h2>{{selectedContact.name | uppercase}} Details</h2>
+                                <img src="{{ selectedContact.image }}" alt="Photo">
+                                <div><span>Name: </span>{{selectedContact.name}}</div>
+                                <div><span>Job: </span>{{selectedContact.job}}</div>
+                                <div><span>Email: </span>{{selectedContact.email}}</div>
+                                <div><span>Phone: </span>{{selectedContact.phone}}</div>
+                                <div><span>Address: </span>{{selectedContact.address}}</div>
+                        </div>
                  </div>  
-        </div>
-
-        
+        </div>  
 </div>
  
